@@ -92,7 +92,7 @@ jobs:
       - name: Comment RTD preview URL on PR
         if: steps.rtd.outputs.exists == 'true'
         env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ secrets.PAT }}
         run: |
           preview_url="https://${{ steps.rtd.outputs.project_slug }}.readthedocs-hosted.com/en/${{ steps.rtd.outputs.version_slug }}/"
           gh pr comment ${{ github.event.issue.number }} \
