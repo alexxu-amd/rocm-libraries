@@ -50,7 +50,7 @@ jobs:
         env:
           RTD_TOKEN: ${{ secrets.RTD_TOKEN }}
         run: |
-          branch_name="${{ steps.pr.outputs.branch }}"
+          branch_name="feature_branch"
           version_slug="${branch_name//\//-}"
           project_slug="advanced-micro-devices-${{ steps.extract.outputs.project_name }}"
 
