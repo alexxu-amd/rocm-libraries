@@ -36,7 +36,7 @@ jobs:
         id: extract
         run: |
           echo "project=libs/rocblas" >> $GITHUB_OUTPUT
-          echo "project_name=rocblas" >> $GITHUB_OUTPUT
+          echo "project_name=rocblas-preview-demo" >> $GITHUB_OUTPUT
 
       - name: Get PR branch
         if: steps.extract.outputs.project
